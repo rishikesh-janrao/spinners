@@ -1,0 +1,122 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 2s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-1 {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  & span {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: 3px solid #61dafb;
+    animation: spin 1s linear infinite;
+  }
+}
+.spinner-2 {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  animation: spin 1s linear infinite;
+
+  & :first-child {
+    width: 50%;
+    height: 100%;
+    background-color: #61dafb;
+  }
+  & :last-child {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+  }
+
+  & .spinner-2-inner {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    background-color: #282c34;
+    position: absolute;
+    border-radius: 50%;
+  }
+}
+
+.spinner-3 {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  animation: spin 1s linear infinite;
+
+  & .inner-block {
+    width: 50%;
+    height: 100%;
+  }
+
+  & .inner-block:last-of-type,
+  & .inner-block:first-of-type {
+    background-color: #61dafb;
+  }
+
+  & .spinner-3-inner {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    background-color: #282c34;
+    position: absolute;
+    border-radius: 50%;
+  }
+}
