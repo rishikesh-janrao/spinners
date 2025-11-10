@@ -1,0 +1,109 @@
+.controls {
+  background: transparent;
+  padding: 15px;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(97, 218, 251, 0.2);
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.controls h2 {
+  margin: 0 0 12px 0;
+  color: #61dafb;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.control-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.control-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #e0e0e0;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.control-row input[type="number"] {
+  padding: 6px 4px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background: #1a1a1a;
+  color: white;
+  font-size: 13px;
+  transition: border-color 0.3s;
+  text-align: center;
+  width: 100%;
+}
+
+.color-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.color-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+}
+
+.color-label {
+  color: #e0e0e0;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.control-row input[type="number"]:focus,
+.color-row input[type="color"]:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+
+.color-row input[type="color"] {
+  width: 100%;
+  height: 32px;
+  cursor: pointer;
+  padding: 2px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background: #1a1a1a;
+  transition: border-color 0.3s;
+}
+
+.color-row input[type="color"]:hover {
+  border-color: #61dafb;
+}
+
+@media (max-width: 1024px) {
+  .controls {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+
+  .controls h2 {
+    font-size: 1.8rem;
+  }
+
+  .control-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+}

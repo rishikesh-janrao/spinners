@@ -1,0 +1,77 @@
+.usage-example {
+  background: transparent;
+  padding: 20px;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.usage-example h3 {
+  color: #61dafb;
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.usage-example .hint {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  margin: 0;
+  font-style: italic;
+  text-align: left;
+}
+
+.usage-example pre {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 6px;
+  overflow: auto;
+  border: 1px solid #333;
+  margin: 0;
+  flex: 1;
+  min-height: 0;
+  text-align: left;
+}
+
+.usage-example code {
+  color: #61dafb;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  display: block;
+  text-align: left;
+  white-space: pre;
+}
+
+@media (max-width: 1024px) {
+  .usage-example {
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    flex: none;
+    overflow: visible;
+  }
+
+  .usage-example h3 {
+    font-size: 1.3rem;
+  }
+
+  .usage-example pre {
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .usage-example code {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,35 @@
+.spinner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 60px 20px;
+  color: #e0e0e0;
+}
+
+.no-results p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.no-results .suggestion {
+  color: #61dafb;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .spinner-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+}

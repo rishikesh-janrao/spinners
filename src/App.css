@@ -1,122 +1,122 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 2s linear;
-  }
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
-.App-link {
+.App-header h1 {
+  margin: 20px 0 10px 0;
   color: #61dafb;
+  font-size: 2.5rem;
+  text-shadow: 0 0 20px rgba(97, 218, 251, 0.5);
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header > p {
+  margin: 0 0 30px 0;
+  color: #e0e0e0;
+  font-size: 1.2rem;
 }
 
-.spinner-1 {
-  width: 5rem;
-  height: 5rem;
+/* Two-column layout for desktop */
+.main-content {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  & span {
+  gap: 30px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  align-items: flex-start;
+  height: calc(100vh - 250px);
+  overflow: hidden;
+}
+
+.left-section {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar styling for left section */
+.left-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+.left-section::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.left-section::-webkit-scrollbar-thumb {
+  background: rgba(97, 218, 251, 0.3);
+  border-radius: 4px;
+}
+
+.left-section::-webkit-scrollbar-thumb:hover {
+  background: rgba(97, 218, 251, 0.5);
+}
+
+.right-section {
+  width: 400px;
+  position: sticky;
+  top: 20px;
+  height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.controls-usage-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Mobile layout - stack vertically */
+@media (max-width: 1024px) {
+  .main-content {
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+    overflow: visible;
+  }
+
+  .left-section {
+    height: auto;
+    overflow: visible;
+  }
+
+  .right-section {
     width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border-top: 3px solid #61dafb;
-    animation: spin 1s linear infinite;
-  }
-}
-.spinner-2 {
-  width: 5rem;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
-  animation: spin 1s linear infinite;
-
-  & :first-child {
-    width: 50%;
-    height: 100%;
-    background-color: #61dafb;
-  }
-  & :last-child {
-    width: 50%;
-    height: 100%;
-    background-color: #fff;
+    position: static;
+    max-height: none;
+    overflow-y: visible;
   }
 
-  & .spinner-2-inner {
-    display: flex;
-    width: 90%;
-    height: 90%;
-    background-color: #282c34;
-    position: absolute;
-    border-radius: 50%;
-  }
-}
-
-.spinner-3 {
-  width: 2rem;
-  height: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
-  animation: spin 1s linear infinite;
-
-  & .inner-block {
-    width: 50%;
-    height: 100%;
+  .App-header h1 {
+    font-size: 2rem;
   }
 
-  & .inner-block:last-of-type,
-  & .inner-block:first-of-type {
-    background-color: #61dafb;
-  }
-
-  & .spinner-3-inner {
-    display: flex;
-    width: 90%;
-    height: 90%;
-    background-color: #282c34;
-    position: absolute;
-    border-radius: 50%;
+  .App-header > p {
+    font-size: 1rem;
   }
 }

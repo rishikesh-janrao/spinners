@@ -1,12 +1,17 @@
 {
-  "name": "spinners",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "cra-template": "1.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-scripts": "5.0.1"
+  "name": "@rishikesh-janrao/spinners",
+  "version": "1.0.0",
+  "main": "src/Spinner.js",
+  "module": "src/Spinner.js",
+  "files": [
+    "src/",
+    "README.md"
+  ],
+  "keywords": ["react", "spinner", "loading", "component", "ui", "animation"],
+  "author": "Rishikesh Janrao",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=17.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
