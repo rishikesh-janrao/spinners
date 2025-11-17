@@ -1,21 +1,44 @@
 {
   "name": "@rishikesh-janrao/spinners",
-  "version": "1.0.0",
-  "main": "src/Spinner.js",
-  "module": "src/Spinner.js",
+  "version": "1.0.1",
+  "main": "dist/index.esm.js",
+  "module": "dist/index.esm.js",
   "files": [
-    "src/",
-    "README.md"
+    "dist/",
+    "README.md",
+    "LICENSE"
   ],
-  "keywords": ["react", "spinner", "loading", "component", "ui", "animation"],
+  "keywords": [
+    "react",
+    "spinner",
+    "loading",
+    "component",
+    "ui",
+    "animation"
+  ],
   "author": "Rishikesh Janrao",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=17.0.0"
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rishikesh-janrao/spinners.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.28.5",
+    "@babel/preset-react": "^7.28.5",
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:lib": "mkdir -p dist && babel lib/Spinner.js -o dist/Spinner.js && babel lib/index.js -o dist/index.js --plugins=@babel/plugin-transform-modules-commonjs && babel lib/index.js -o dist/index.esm.js && cp lib/Spinner.css dist/ && cp -r lib/data dist/",
+    "prepublishOnly": "npm run build:lib",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

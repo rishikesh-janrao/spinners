@@ -4,6 +4,10 @@
 
 Beautiful, customizable React spinner components for loading states and UI feedback.
 
+## Live Example
+
+Visit https://spinners-zeta.vercel.app/
+
 ## Features
 
 - 50+ unique spinner designs, all in one component
@@ -23,16 +27,14 @@ npm install @rishikesh-janrao/spinners
 ## Usage
 
 ```jsx
-import Spinner from '@rishikesh-janrao/spinners/src/Spinner';
+import Spinner from '@rishikesh-janrao/spinners';
 
 <Spinner
-	type={1}                // Spinner type (number or name)
-	size={3}                // rem
-	color="#61dafb"
-	secondaryColor="#fff"
-	backgroundColor="#282c34"
-	speed={1}               // seconds
-	borderWidth={4}         // px
+  type="ring"           // or 1
+  size={3}              // rem
+  color="#61dafb"
+  speed={1}             // seconds
+  borderWidth={4}       // px
 />
 ```
 
@@ -50,7 +52,7 @@ import Spinner from '@rishikesh-janrao/spinners/src/Spinner';
 
 ## Spinner Types
 
-You can use either a number (1-50) or a name (e.g., `"ring"`, `"dual"`, `"dots"`, etc.) for the `type` prop. See the full list in `src/data/spinnerNames.js`.
+You can use either a number (1-50) or a name (e.g., `"ring"`, `"dual"`, `"dots"`, etc.) for the `type` prop. See the full list in `src/data/spinnerNames.js`.(visit https://spinners-zeta.vercel.app/ to get type number)
 
 ## Live Demo & Customization
 
